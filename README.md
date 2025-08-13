@@ -50,6 +50,18 @@ To automate the ingestion, cleaning, transformation, storage, and visualization 
 - AWS S3 bucket with pollutant folders and uploaded files
 
 ### 2. Required JARs
+### 🔗 Required JAR Downloads (External)
+
+To enable integration between Spark, AWS S3, and PostgreSQL, download and place the following JARs into the `spark_jars/` folder:
+
+| JAR File | Description | Download Link |
+|----------|-------------|----------------|
+| `postgresql-42.6.0.jar` | PostgreSQL JDBC Driver | [Download](https://jdbc.postgresql.org/download/postgresql-42.6.0.jar) |
+| `hadoop-aws-3.3.5.jar` | Hadoop AWS Connector for Spark | [Download](https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.5/hadoop-aws-3.3.5.jar) |
+| `aws-java-sdk-bundle-1.11.1026.jar` | AWS SDK Bundle (required by Hadoop) | [Download](https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.1026/aws-java-sdk-bundle-1.11.1026.jar) |
+
+🗂️ **Place all downloaded `.jar` files inside your `spark_jars/` folder before running the pipeline.**
+
 
 Place the following JARs in the `spark_jars/` folder:
 - `postgresql-42.x.x.jar` (JDBC)
